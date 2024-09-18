@@ -44,15 +44,6 @@ const mainContainer = document.querySelector(".main-content");
 
 // MOST EFFICIENT.....
 
-mainContainer.onclick = (e) => {
-  let clickedElement = e.target;
-  if (clickedElement.classList.contains("label2")) {
-    clickedElement.offsetParent
-      .querySelector(".content")
-      .classList.toggle("active-content");
-  }
-};
-
 icons.forEach(function (icon, offset) {
   icon.addEventListener("click", () => {
     if (icon.getAttribute("src") === "./assets/icon-plus.svg") {
@@ -62,3 +53,12 @@ icons.forEach(function (icon, offset) {
     }
   });
 });
+
+mainContainer.onclick = (e) => {
+  let clickedElement = e.target;
+  if (clickedElement.classList.contains("label2")) {
+    clickedElement.offsetParent
+      .querySelector(".content")
+      .classList.toggle("active-content");
+  }
+};
